@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sitio web destinado a la libre venta de videojuegos y paquetes de los mismos.">
+    <meta name="keywords" content="Compras, Videojuegos, Ventas, Online, Email, Login, Juegos, Soulslike, Página web">
+    <meta name="author" content="Jorge Fracalossi Martínez">
     <title>S-Team</title>
     <link rel="stylesheet" href="./css/styles.css">
 </head>
@@ -11,11 +14,30 @@
     <header>
         <h1>S-Team</h1>
 
+        <div class="user-info">
+            <p id="welcomeUser"></p>
+        </div>
+
         <nav>
+
+            <div id="authButtons">
+                <button id="signUpButton">
+                    Sign up
+                </button>
+
+                <button id="loginShortcutButton">
+                    Login
+                </button>
+
+                <button id="logoutButton">
+                    Log Out
+                </button>
+            </div>
+
             <input
-                type="text"
+                type="search"
                 id="searchInput"
-                placeholder="Buscar juego..."
+                placeholder="¿Qué estás buscando?"
             >
 
             <select id="categoryFilter">

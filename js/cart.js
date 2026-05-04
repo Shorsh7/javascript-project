@@ -1,5 +1,10 @@
-// Estado del carrito
-let cart = []
+// Cargar carrito desde localStorage
+let cart = JSON.parse(localStorage.getItem("cart")) || []
+
+// Guardar carrito en localStorage
+const saveCart = () => {
+    localStorage.setItem("cart", JSON.stringify(cart))
+}
 
 // Obtener carrito
 export const getCart = () => {
@@ -18,16 +23,22 @@ export const addToCart = (game) => {
             quantity: 1
         })
     }
+
+    saveCart()
 }
 
 // Eliminar juego del carrito
 export const removeFromCart = (gameId) => {
     cart = cart.filter(game => game.id !== gameId)
+
+    saveCart()
 }
 
 // Vaciar carrito
 export const clearCart = () => {
     cart = []
+
+    saveCart()
 }
 
 // Calcular total
