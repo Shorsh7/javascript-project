@@ -1,11 +1,74 @@
 <!DOCTYPE html>
-    <html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>S-Team</title>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
-    <body>
-        <h1>Sad</h1>
-    </body>
+<body>
+
+    <header>
+        <h1>S-Team</h1>
+
+        <nav>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Buscar juego..."
+            >
+
+            <select id="categoryFilter">
+                <option value="all">Todos</option>
+                <option value="Soulslike">Soulslike</option>
+                <option value="DLC">DLC</option>
+                <option value="Bundle">Bundle</option>
+                <option value="Action RPG">Action RPG</option>
+                <option value="Hunting">Hunting</option>
+            </select>
+
+            <button id="cartButton">
+                Carrito
+            </button>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="gamesContainer">
+        </section>
+
+    </main>
+
+    <aside id="cartContainer">
+        <h2>Carrito</h2>
+
+        <div id="cartItems"></div>
+
+        <p id="totalPrice">Total: USD 0</p>
+
+        <button id="checkoutButton">
+            Finalizar compra
+        </button>
+    </aside>
+
+    <section id="addGameSection">
+        <h2>Agregar videojuego</h2>
+
+        <input type="text" id="gameName" placeholder="Nombre">
+        <input type="number" id="gamePrice" placeholder="Precio">
+        <input type="text" id="gameDescription" placeholder="Descripción">
+        <input type="number" id="gameYear" placeholder="Año">
+        <input type="text" id="gameDev" placeholder="Desarrollador">
+        <input type="text" id="gameGenre" placeholder="Género">
+        <input type="text" id="gameImage" placeholder="Ruta de imagen">
+
+        <button id="addGameButton">
+            Agregar juego
+        </button>
+    </section>
+
+    <script type="module" src="./js/main.js"></script>
+
+</body>
 </html>
