@@ -12,7 +12,6 @@ const saveUsers = (users) => {
     )
 }
 
-// Registrar usuario
 export const registerUser = (
     username,
     email,
@@ -49,7 +48,6 @@ export const registerUser = (
     }
 }
 
-// Login
 export const loginUser = (
     username,
     password
@@ -80,19 +78,16 @@ export const loginUser = (
     }
 }
 
-// Logout
 export const logoutUser = () => {
     localStorage.removeItem(CURRENT_USER_KEY)
 }
 
-// Usuario actual
 export const getCurrentUser = () => {
     return JSON.parse(
         localStorage.getItem(CURRENT_USER_KEY)
     )
 }
 
-// Verificar autenticación
 export const isAuthenticated = () => {
     return !!getCurrentUser()
 }
