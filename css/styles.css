@@ -149,6 +149,7 @@ nav {
 .nav-right {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     align-items: stretch;
 
@@ -319,4 +320,134 @@ nav {
         0 0 5px rgba(255,255,255,0.9),
         0 0 10px rgba(255,255,255,0.7),
         0 0 20px rgba(255,255,255,0.5);
+}
+
+/* CART */
+
+#cartDropdown {
+    display: none;
+    align-items: center;
+    text-align: center;
+}
+
+#cartDropdown.show-cart {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cartDropdown {
+    position: absolute;
+    top: 100%;
+    left: 32%;
+    z-index: 9999;
+
+    transform: translateX(-50%);
+
+    width: 320px;
+
+    padding: 20px;
+    margin-top: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(15,15,20,0.95);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.08);
+}
+
+#cartDropdown h4,
+#cartDropdown p {
+    color: white;
+    font-weight: bolder;
+    margin-left: 60px;
+}
+
+.cart-item {
+    width: 100%;
+    margin-top: -50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 12px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+#checkoutButton,
+#clearCartButton {
+    width: 80%;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.remove-btn {
+    margin-top: 13rem;
+    border-radius: 150px;
+}
+
+#totalPrice {
+    margin-right: 60px;
+}
+
+/* WISHLIST */
+
+#wishlistDropdown {
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 32%;
+
+    transform: translateX(-50%);
+
+    width: 320px;
+
+    padding: 20px;
+    margin-top: 15px;
+
+    border-radius: 16px;
+
+    background: rgba(10,10,20,0.97);
+
+    z-index: 9999;
+}
+
+#wishlistDropdown.show-wishlist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#wishlistButton {
+    width: 200px;
+
+    background: linear-gradient(
+        135deg,
+        #e67dbd,
+        #b40d82
+    );
+
+    color: black;
+
+    box-shadow:
+        0 0 8px rgba(255, 65, 176, 0.6),
+        0 0 18px rgba(255, 43, 174, 0.4);
+}
+
+#clearWishlistButton {
+    margin-left: 50px;
+}
+
+#wishlistDropdown h1,
+h2, h3, h4, p{
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
 }

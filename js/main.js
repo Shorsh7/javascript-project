@@ -2,6 +2,7 @@ import { getGames } from "./videogames.js"
 import { renderGames, renderCart, renderWishlist } from "./ui.js"
 import { clearCart, getCart } from "./cart.js"
 import { isAuthenticated, logoutUser, getCurrentUser } from "./auth.js"
+import { getWishlist, clearWishlist } from "./wishlist.js"
 
 
 const searchInput = document.getElementById("searchInput")
@@ -21,7 +22,13 @@ const signUpButton = document.getElementById("signUpButton")
 const loginShortcutButton = document.getElementById("loginShortcutButton")
 const logoutButton = document.getElementById("logoutButton")
 const welcomeUser = document.getElementById("welcomeUser")
+
+const cartButton = document.getElementById("cartButton")
+const cartDropdown = document.getElementById("cartDropdown")
 const clearCartButton = document.getElementById("clearCartButton")
+const wishlistButton = document.getElementById("wishlistButton")
+const wishlistDropdown = document.getElementById("wishlistDropdown")
+const clearWishlistButton = document.getElementById("clearWishlistButton")
 
 let allGames = []
 
@@ -52,6 +59,9 @@ const init = async () => {
     setupAddGame()
     setupAuthButtons()
     setupClearCart()
+    setupCartDropdown()
+    setupWishlistDropdown()
+    setupClearWishlist()
 }
 
 const showWelcomeUser = () => {
@@ -220,6 +230,61 @@ const setupClearCart = () => {
                 renderCart()
 
                 alert("¡Carrito vaciado con éxito!")
+            }
+        }
+    )
+}
+
+const setupCartDropdown = () => {
+    cartButton.addEventListener(
+        "click",
+        () => {
+            cartDropdown.classList.toggle(
+                "show-cart"
+            )
+            wishlistDropdown.classList.remove(
+                "show-wishlist"
+            )
+        }
+    )
+}
+
+const setupWishlistDropdown = () => {
+    wishlistButton.addEventListener(
+        "click",
+        () => {
+            wishlistDropdown.classList.toggle(
+                "show-wishlist"
+            )
+            cartDropdown.classList.remove(
+                "show-cart"
+            )
+        }
+    )
+}
+
+const setupClearWishlist = () => {
+    clearWishlistButton.addEventListener(
+        "click",
+        () => {
+            const wishlist = getWishlist()
+
+            if (wishlist.length === 0) {
+                alert("No tienes juegos en favoritos")
+                return
+            }
+
+            const confirmClear = confirm(
+                "¿Estás seguro que deseas vaciar tus favoritos?"
+            )
+
+            if (confirmClear) {
+                clearWishlist()
+                renderWishlist()
+
+                alert(
+                    "Favoritos vaciados correctamente"
+                )
             }
         }
     )

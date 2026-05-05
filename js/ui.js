@@ -24,7 +24,6 @@ const totalPrice =
 const wishlistContainer =
     document.getElementById("wishlistContainer")
 
-// Render de juegos
 export const renderGames = (games) => {
     gamesContainer.innerHTML = ""
 
@@ -91,7 +90,6 @@ export const renderGames = (games) => {
     })
 }
 
-// Render de carrito
 export const renderCart = () => {
     const cart = getCart()
 
@@ -104,12 +102,14 @@ export const renderCart = () => {
         cartItem.classList.add("cart-item")
 
         cartItem.innerHTML = `
+        <div class="cart-item-info">
             <h4>${game.name}</h4>
-            <p>Cantidad: ${game.quantity}</p>
+            <p>x${game.quantity}</p>
             <p>USD ${game.price}</p>
-
+        </div>
+        
             <button class="remove-btn">
-                Eliminar
+                X
             </button>
         `
 

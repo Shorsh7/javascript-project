@@ -52,3 +52,10 @@ export const isInWishlist = (gameId) => {
         game => game.id === gameId
     )
 }
+
+export const clearWishlist = () => {
+    localStorage.setItem(
+        getWishlistKey(),
+        JSON.stringify([])
+    )
+}
