@@ -1,11 +1,8 @@
 import { getGames } from "./videogames.js"
-import { renderGames, renderCart } from "./ui.js"
+import { renderGames, renderCart, renderWishlist } from "./ui.js"
 import { clearCart, getCart } from "./cart.js"
-import {
-    isAuthenticated,
-    logoutUser,
-    getCurrentUser
-} from "./auth.js"
+import { isAuthenticated, logoutUser, getCurrentUser } from "./auth.js"
+
 
 const searchInput = document.getElementById("searchInput")
 const categoryFilter = document.getElementById("categoryFilter")
@@ -47,6 +44,7 @@ const init = async () => {
     renderGames(allGames)
     renderCart()
     showWelcomeUser()
+    renderWishlist()
 
     setupFilters()
     setupCheckout()
