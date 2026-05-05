@@ -36,22 +36,27 @@ export const renderGames = (games) => {
 
         gameCard.innerHTML = `
             <img src="${game.image}" alt="${game.name}">
-            <h3>${game.name}</h3>
-            <p>${game.genre}</p>
-            <p>${game.description}</p>
-            <p>USD ${game.price}</p>
+            
+            <div class="game-content">
+                <h3>${game.name}</h3>
+                <p>${game.genre}</p>
+                <p class="description">${game.description}</p>
+                <p class="price">USD ${game.price}</p>
+            </div>
 
-            <button class="add-to-cart-btn">
-                Agregar al carrito
-            </button>
+            <div class="game-actions">
+                <button class="add-to-cart-btn">
+                    Agregar al carrito
+                </button>
 
-            <button class="wishlist-btn">
-                ${
-                    isInWishlist(game.id)
-                        ? "❤️ Quitar favorito"
-                        : "♡ Favorito"
-                }
-            </button>
+                <button class="wishlist-btn">
+                    ${
+                        isInWishlist(game.id)
+                            ? "❤️ Quitar favorito"
+                            : "♡ Favorito"
+                    }
+                </button>
+            </div>
         `
 
         const cartButton =
@@ -126,7 +131,6 @@ export const renderCart = () => {
         `Total: USD ${getTotalPrice().toFixed(2)}`
 }
 
-// Render de favoritos
 export const renderWishlist = () => {
     const wishlist = getWishlist()
 
@@ -146,7 +150,6 @@ export const renderWishlist = () => {
 
         wishlistItem.innerHTML = `
             <h4>${game.name}</h4>
-            <p>USD ${game.price}</p>
 
             <button class="remove-wishlist-btn">
                 Quitar

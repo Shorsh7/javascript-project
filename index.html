@@ -19,39 +19,33 @@
         </div>
 
         <nav>
+            <div class="nav-left">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Buscar juego..."
+                >
 
-            <div id="authButtons">
-                <button id="signUpButton">
-                    Sign up
-                </button>
-
-                <button id="loginShortcutButton">
-                    Login
-                </button>
-
-                <button id="logoutButton">
-                    Log Out
-                </button>
+                <select id="categoryFilter">
+                    <option value="all">Todos</option>
+                    <option value="Soulslike">Soulslike</option>
+                    <option value="DLC">DLC</option>
+                    <option value="Bundle">Bundle</option>
+                    <option value="Action RPG">Action RPG</option>
+                    <option value="Hunting">Hunting</option>
+                </select>
             </div>
 
-            <input
-                type="search"
-                id="searchInput"
-                placeholder="¿Qué estás buscando?"
-            >
+            <div class="nav-right">
+                <div class="auth-buttons">
+                    <button id="signUpButton">Sign up</button>
+                    <button id="loginShortcutButton">Login</button>
+                    <button id="logoutButton">Log out</button>
+                </div>
 
-            <select id="categoryFilter">
-                <option value="all">Todos</option>
-                <option value="Soulslike">Soulslike</option>
-                <option value="DLC">DLC</option>
-                <option value="Bundle">Bundle</option>
-                <option value="Action RPG">Action RPG</option>
-                <option value="Hunting">Hunting</option>
-            </select>
+                <button id="cartButton">Carrito</button>
 
-            <button id="cartButton">
-                Carrito
-            </button>
+            </div>
         </nav>
     </header>
 
