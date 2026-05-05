@@ -63,11 +63,13 @@ body {
     color: white;
     font-size: 1.3rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .game-card p {
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.4;
+    text-align: justify;
 }
 
 .game-card p:last-of-type {
