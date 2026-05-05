@@ -21,6 +21,7 @@ const signUpButton = document.getElementById("signUpButton")
 const loginShortcutButton = document.getElementById("loginShortcutButton")
 const logoutButton = document.getElementById("logoutButton")
 const welcomeUser = document.getElementById("welcomeUser")
+const clearCartButton = document.getElementById("clearCartButton")
 
 let allGames = []
 
@@ -50,6 +51,7 @@ const init = async () => {
     setupCheckout()
     setupAddGame()
     setupAuthButtons()
+    setupClearCart()
 }
 
 const showWelcomeUser = () => {
@@ -196,6 +198,31 @@ const clearForm = () => {
     gameDev.value = ""
     gameGenre.value = ""
     gameImage.value = ""
+}
+
+const setupClearCart = () => {
+    clearCartButton.addEventListener(
+        "click",
+        () => {
+            const cart = getCart()
+
+            if (cart.length === 0) {
+                alert("El carrito ya está vacío")
+                return
+            }
+
+            const confirmClear = confirm(
+                "¿Estás seguro que deseas vaciar el carrito?"
+            )
+
+            if (confirmClear) {
+                clearCart()
+                renderCart()
+
+                alert("¡Carrito vaciado con éxito!")
+            }
+        }
+    )
 }
 
 init()
