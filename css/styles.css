@@ -455,14 +455,20 @@ nav {
 
 /* LOGIN SECTION */
 
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #loginSection {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 500px;
     width: 450px;
-    margin-top: 200px;
-    margin-left: 700px;
     align-items: center;
     padding: 20px;
 
@@ -484,9 +490,24 @@ nav {
 }
 
 #loginSection input {
-    border-radius: 5px;
-    height: 25px;
+    width: 50%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
     font-family: "Press Start 2P", monospace;
+    font-size: 1rem;
+}
+
+#loginSection input::placeholder {
+    color: rgba(255,255,255,0.6);
 }
 
 #loginButton {
@@ -508,7 +529,10 @@ nav {
 }
 
 #loginButton:hover {
-    transform: translateX(-3px) scale(1.03);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(140,8,180,0.8);
 }
 
 /* REGISTER SECTION */
@@ -519,8 +543,6 @@ nav {
     justify-content: space-between;
     height: 500px;
     width: 450px;
-    margin-top: 200px;
-    margin-left: 700px;
     align-items: center;
     padding: 20px;
 
@@ -542,9 +564,24 @@ nav {
 }
 
 #registerSection input {
-    border-radius: 5px;
-    height: 25px;
+    width: 50%;
+    height: 50px;
+
+    padding: 0 15px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: rgba(255,255,255,0.08);
+
+    color: white;
+
     font-family: "Press Start 2P", monospace;
+    font-size: 1rem;
+}
+
+#registerSection input::placeholder {
+    color: rgba(255,255,255,0.6);
 }
 
 #registerButton {
@@ -566,5 +603,8 @@ nav {
 }
 
 #registerButton:hover {
-    transform: translateX(-3px) scale(1.03);
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(140,8,180,0.8);
 }

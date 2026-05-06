@@ -61,6 +61,7 @@ const init = async () => {
     setupCartDropdown()
     setupWishlistDropdown()
     setupClearWishlist()
+    setupCloseDropdowns()
 }
 
 const showWelcomeUser = () => {
@@ -156,16 +157,6 @@ const setupCheckout = () => {
     })
 }
 
-const clearForm = () => {
-    gameName.value = ""
-    gamePrice.value = ""
-    gameDescription.value = ""
-    gameYear.value = ""
-    gameDev.value = ""
-    gameGenre.value = ""
-    gameImage.value = ""
-}
-
 const setupClearCart = () => {
     clearCartButton.addEventListener(
         "click",
@@ -240,6 +231,44 @@ const setupClearWishlist = () => {
 
                 alert(
                     "Favoritos vaciados correctamente"
+                )
+            }
+        }
+    )
+}
+
+const setupCloseDropdowns = () => {
+    document.addEventListener(
+        "click",
+        (event) => {
+
+            const clickedInsideCart =
+                cartDropdown.contains(event.target)
+
+            const clickedCartButton =
+                cartButton.contains(event.target)
+
+            const clickedInsideWishlist =
+                wishlistDropdown.contains(event.target)
+
+            const clickedWishlistButton =
+                wishlistButton.contains(event.target)
+
+            if (
+                !clickedInsideCart &&
+                !clickedCartButton
+            ) {
+                cartDropdown.classList.remove(
+                    "show-cart"
+                )
+            }
+
+            if (
+                !clickedInsideWishlist &&
+                !clickedWishlistButton
+            ) {
+                wishlistDropdown.classList.remove(
+                    "show-wishlist"
                 )
             }
         }
