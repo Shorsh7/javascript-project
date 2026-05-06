@@ -56,7 +56,6 @@ const init = async () => {
 
     setupFilters()
     setupCheckout()
-    setupAddGame()
     setupAuthButtons()
     setupClearCart()
     setupCartDropdown()
@@ -155,49 +154,6 @@ const setupCheckout = () => {
             alert("Compra realizada con éxito")
         }
     })
-}
-
-const setupAddGame = () => {
-    addGameButton.addEventListener(
-        "click",
-        addNewGame
-    )
-}
-
-const addNewGame = () => {
-    if (
-        !gameName.value.trim() ||
-        !gamePrice.value ||
-        !gameDescription.value.trim() ||
-        !gameYear.value ||
-        !gameDev.value.trim() ||
-        !gameGenre.value.trim() ||
-        !gameImage.value.trim()
-    ) {
-        alert("Completa todos los campos")
-        return
-    }
-
-    const newGame = {
-        id: allGames.length + 1,
-        name: gameName.value.trim(),
-        price: parseFloat(gamePrice.value),
-        description: gameDescription.value.trim(),
-        year: parseInt(gameYear.value),
-        developer: gameDev.value.trim(),
-        genre: gameGenre.value.trim(),
-        inCart: false,
-        image: gameImage.value.trim()
-    }
-
-    allGames.push(newGame)
-
-    saveGames()
-    renderGames(allGames)
-
-    clearForm()
-
-    alert("Juego agregado correctamente")
 }
 
 const clearForm = () => {

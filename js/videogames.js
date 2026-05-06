@@ -46,16 +46,3 @@ export const filterGamesByCategory = (category) => {
         return game.genre === category
     })
 }
-
-// Agregar nuevo juego
-export const addGame = (newGame) => {
-    const game = {
-        id: games.length + 1,
-        inCart: false,
-        ...newGame
-    }
-
-    games.push(game)
-
-    return game
-}
