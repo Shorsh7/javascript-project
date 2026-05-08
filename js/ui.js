@@ -1,16 +1,6 @@
-import {
-    addToCart,
-    getCart,
-    removeFromCart,
-    getTotalPrice
-} from "./cart.js"
-
-import {
-    addToWishlist,
-    removeFromWishlist,
-    isInWishlist,
-    getWishlist
-} from "./wishlist.js"
+import { addToCart, getCart, removeFromCart, getTotalPrice } from "./cart.js"
+import { addToWishlist, removeFromWishlist, isInWishlist, getWishlist } from "./wishlist.js"
+import { showToast } from "./alerts.js"
 
 const gamesContainer =
     document.getElementById("gamesContainer")
@@ -34,11 +24,17 @@ export const renderGames = (games) => {
         gameCard.classList.add("game-card")
 
         gameCard.innerHTML = `
-            <img src="${game.image}" alt="${game.name}">
+            <div class="game-image-container">
+                <img
+                    src="${game.image}"
+                    alt="${game.name}"
+                    class="game-image"
+                >
+            </div>
             
             <div class="game-content">
                 <h3>${game.name}</h3>
-                <p>${game.genre}</p>
+                <p>${game.genre.join(", ")}</p>
                 <p class="description">${game.description}</p>
                 <p class="price">USD ${game.price}</p>
             </div>
@@ -66,6 +62,11 @@ export const renderGames = (games) => {
             () => {
                 addToCart(game)
                 renderCart()
+
+                showToast(
+                    "success",
+                    `${game.name} agregado al carrito`
+                )
             }
         )
 
@@ -77,8 +78,18 @@ export const renderGames = (games) => {
             () => {
                 if (isInWishlist(game.id)) {
                     removeFromWishlist(game.id)
+
+                    showToast(
+                        "info",
+                        `${game.name} eliminado de favoritos`
+                    )
                 } else {
                     addToWishlist(game)
+
+                    showToast(
+                        "success",
+                        `${game.name} agregado a favoritos`
+                    )
                 }
 
                 renderGames(games)
@@ -121,6 +132,11 @@ export const renderCart = () => {
             () => {
                 removeFromCart(game.id)
                 renderCart()
+
+                showToast(
+                    "info",
+                    `${game.name} eliminado del carrito`
+                )
             }
         )
 

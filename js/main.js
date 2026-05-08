@@ -3,6 +3,7 @@ import { renderGames, renderCart, renderWishlist } from "./ui.js"
 import { clearCart, getCart } from "./cart.js"
 import { isAuthenticated, logoutUser, getCurrentUser } from "./auth.js"
 import { getWishlist, clearWishlist } from "./wishlist.js"
+import { showConfirmAlert, showSuccessAlert, showErrorAlert, showToast } from "./alerts.js"
 
 
 const searchInput = document.getElementById("searchInput")
@@ -136,47 +137,66 @@ const filterGames = () => {
 }
 
 const setupCheckout = () => {
-    checkoutButton.addEventListener("click", () => {
-        const cart = getCart()
+    checkoutButton.addEventListener(
+        "click",
+        async () => {
+            const cart = getCart()
 
-        if (cart.length === 0) {
-            alert("El carrito está vacío")
-            return
+            if (cart.length === 0) {
+                showErrorAlert(
+                    "Carrito vacío",
+                    "No hay productos para comprar"
+                )
+                return
+            }
+
+            const result =
+                await showConfirmAlert(
+                    "Finalizar compra",
+                    "¿Deseas confirmar la compra?"
+                )
+
+            if (result.isConfirmed) {
+                clearCart()
+                renderCart()
+
+                showSuccessAlert(
+                    "Compra realizada",
+                    "¡Gracias por comprar en S-Team!"
+                )
+            }
         }
-
-        const confirmPurchase = confirm(
-            "¿Deseas finalizar la compra?"
-        )
-
-        if (confirmPurchase) {
-            clearCart()
-            renderCart()
-
-            alert("Compra realizada con éxito")
-        }
-    })
+    )
 }
 
 const setupClearCart = () => {
     clearCartButton.addEventListener(
         "click",
-        () => {
+        async () => {
             const cart = getCart()
 
             if (cart.length === 0) {
-                alert("El carrito ya está vacío")
+                showErrorAlert(
+                    "Carrito vacío",
+                    "El carrito ya está vacío."
+                )
                 return
             }
 
-            const confirmClear = confirm(
-                "¿Estás seguro que deseas vaciar el carrito?"
-            )
+            const result =
+                await showConfirmAlert(
+                    "Vaciar carrito",
+                    "¿Estás seguro que deseas vaciar el carrito?"
+                )
 
-            if (confirmClear) {
+            if (result.isConfirmed) {
                 clearCart()
                 renderCart()
 
-                alert("¡Carrito vaciado con éxito!")
+                showToast(
+                    "success",
+                    "El carrito está vacío."
+                )
             }
         }
     )
@@ -213,24 +233,33 @@ const setupWishlistDropdown = () => {
 const setupClearWishlist = () => {
     clearWishlistButton.addEventListener(
         "click",
-        () => {
-            const wishlist = getWishlist()
+        async () => {
+            const wishlist =
+                getWishlist()
 
-            if (wishlist.length === 0) {
-                alert("No tienes juegos en favoritos")
+            if (
+                wishlist.length === 0
+            ) {
+                showErrorAlert(
+                    "Favoritos vacíos",
+                    "No hay favoritos para eliminar"
+                )
                 return
             }
 
-            const confirmClear = confirm(
-                "¿Estás seguro que deseas vaciar tus favoritos?"
-            )
+            const result =
+                await showConfirmAlert(
+                    "Vaciar favoritos",
+                    "¿Deseas eliminar todos los favoritos?"
+                )
 
-            if (confirmClear) {
+            if (result.isConfirmed) {
                 clearWishlist()
                 renderWishlist()
 
-                alert(
-                    "Favoritos vaciados correctamente"
+                showToast(
+                    "success",
+                    "Favoritos vaciados"
                 )
             }
         }

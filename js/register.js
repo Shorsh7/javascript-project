@@ -1,17 +1,46 @@
 import { registerUser } from "./auth.js"
 
-const registerUsername = document.getElementById("registerUsername")
-const registerEmail = document.getElementById("registerEmail")
-const registerPassword = document.getElementById("registerPassword")
-const registerButton = document.getElementById("registerButton")
+import { showToast, showErrorAlert } from "./alerts.js"
+
+const registerUsername =
+    document.getElementById(
+        "registerUsername"
+    )
+
+const registerEmail =
+    document.getElementById(
+        "registerEmail"
+    )
+
+const registerPassword =
+    document.getElementById(
+        "registerPassword"
+    )
+
+const registerButton =
+    document.getElementById(
+        "registerButton"
+    )
 
 const handleRegister = () => {
-    const username = registerUsername.value.trim()
-    const email = registerEmail.value.trim()
-    const password = registerPassword.value.trim()
+    const username =
+        registerUsername.value.trim()
 
-    if (!username || !email || !password) {
-        alert("Completa todos los campos")
+    const email =
+        registerEmail.value.trim()
+
+    const password =
+        registerPassword.value.trim()
+
+    if (
+        !username ||
+        !email ||
+        !password
+    ) {
+        showErrorAlert(
+            "Campos incompletos",
+            "Completa todos los campos"
+        )
         return
     }
 
@@ -22,16 +51,46 @@ const handleRegister = () => {
     )
 
     if (!result.success) {
-        alert(result.message)
+        showErrorAlert(
+            "Registro fallido",
+            result.message
+        )
         return
     }
 
-    alert(result.message)
+    showToast(
+        "success",
+        result.message
+    )
 
-    window.location.href = "./login.html"
+    setTimeout(() => {
+        window.location.href =
+            "./login.html"
+    }, 1500)
 }
 
 registerButton.addEventListener(
     "click",
     handleRegister
+)
+
+const handleEnter = (event) => {
+    if (event.key === "Enter") {
+        handleRegister()
+    }
+}
+
+registerUsername.addEventListener(
+    "keydown",
+    handleEnter
+)
+
+registerEmail.addEventListener(
+    "keydown",
+    handleEnter
+)
+
+registerPassword.addEventListener(
+    "keydown",
+    handleEnter
 )

@@ -7,19 +7,33 @@
     <meta name="keywords" content="Compras, Videojuegos, Ventas, Online, Email, Login, Juegos, Soulslike, Página web">
     <meta name="author" content="Jorge Fracalossi Martínez">
     <title>S-Team</title>
+    <link rel="icon" type="image/png" href="./img/s-team-logo.png">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
 
     <header>
-        <h1>S-Team</h1>
+        
+        <div class="top-header">
 
-        <div class="user-info">
-            <p id="welcomeUser"></p>
+            <div class="logo-container">
+                <img
+                    src="./img/logo.png"
+                    alt="S-Team Logo"
+                    id="siteLogo"
+                >
+            </div>
+
+            <div class="user-info">
+                <p id="welcomeUser"></p>
+            </div>
+
         </div>
 
         <nav>
             <div class="nav-left">
+
+                
                 <input
                     type="search"
                     id="searchInput"
@@ -82,6 +96,7 @@
 
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="./js/main.js"></script>
 
 </body>

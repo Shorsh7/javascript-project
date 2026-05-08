@@ -2,7 +2,13 @@ const USERS_KEY = "users"
 const CURRENT_USER_KEY = "currentUser"
 
 const getUsers = () => {
-    return JSON.parse(localStorage.getItem(USERS_KEY)) || []
+    return (
+        JSON.parse(
+            localStorage.getItem(
+                USERS_KEY
+            )
+        ) || []
+    )
 }
 
 const saveUsers = (users) => {
@@ -28,7 +34,8 @@ export const registerUser = (
     if (userExists) {
         return {
             success: false,
-            message: "Este usuario ya existe."
+            message:
+                "Este usuario ya existe."
         }
     }
 
@@ -40,30 +47,36 @@ export const registerUser = (
     }
 
     users.push(newUser)
+
     saveUsers(users)
 
     return {
         success: true,
-        message: "Usuario registrado correctamente."
+        message:
+            "Usuario registrado correctamente."
     }
 }
 
 export const loginUser = (
-    username,
+    identifier,
     password
 ) => {
     const users = getUsers()
 
     const user = users.find(
         user =>
-            user.username === username &&
+            (
+                user.email === identifier ||
+                user.username === identifier
+            ) &&
             user.password === password
     )
 
     if (!user) {
         return {
             success: false,
-            message: "Usuario y/o contraseña incorrectos. Intenta nuevamente."
+            message:
+                "Usuario/email o contraseña incorrectos."
         }
     }
 
@@ -74,17 +87,22 @@ export const loginUser = (
 
     return {
         success: true,
-        message: "Datos correctos, ¡Bienvenido!"
+        message:
+            "Datos correctos, ¡Bienvenido!"
     }
 }
 
 export const logoutUser = () => {
-    localStorage.removeItem(CURRENT_USER_KEY)
+    localStorage.removeItem(
+        CURRENT_USER_KEY
+    )
 }
 
 export const getCurrentUser = () => {
     return JSON.parse(
-        localStorage.getItem(CURRENT_USER_KEY)
+        localStorage.getItem(
+            CURRENT_USER_KEY
+        )
     )
 }
 
