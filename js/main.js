@@ -41,14 +41,26 @@ const saveGames = () => {
 }
 
 const init = async () => {
-    const savedGames = localStorage.getItem("games")
+    const fetchedGames =
+        await getGames()
 
-    if (savedGames) {
-        allGames = JSON.parse(savedGames)
-    } else {
-        allGames = await getGames()
-        saveGames()
-    }
+    const savedGames =
+        JSON.parse(
+            localStorage.getItem("games")
+        ) || []
+
+    allGames = [
+        ...fetchedGames,
+        ...savedGames.filter(
+            saved =>
+                !fetchedGames.some(
+                    fetched =>
+                        fetched.id === saved.id
+                )
+        )
+    ]
+
+    saveGames()
 
     renderGames(allGames)
     renderCart()

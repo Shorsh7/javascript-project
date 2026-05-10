@@ -6,7 +6,7 @@
         "description": "DARK SOULS™ será el juego más desafiante que hayas jugado este año. ¿Podrás soportar un millón de muertes y reclamar tu legado?",
         "year": 2011,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/Dark_Souls_Portada.webp"
     },
@@ -30,7 +30,7 @@
         "description": "Entonces llegó el Fuego. Vuelve a disfrutar del aclamado juego que definió el género con el que empezó todo. Gracias a una magnífica remasterización, podrás regresar a Lordran con unos impresionantes detalles en alta definición y a 60 fps.",
         "year": 2018,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/Dark_Souls_Remastered_Portada.webp"
     },
@@ -42,7 +42,7 @@
         "description": "DARK SOULS™ II, desarrollado por FromSoftware, es la tan esperada secuela del implacable éxito de 2011, Dark Souls. La inimitable experiencia de este juego de rol de acción de la vieja escuela cautivó la imaginación de jugadores de todo el mundo con desafíos increíbles e intensas y emotivas recompensas. Incluye 3 DLCs: La Corona del Rey Sumergido, La Corona del Viejo Rey de Hierro y La Corona del Rey de Marfil",
         "year": 2014,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/Dark_Souls_II_Portada.webp"
     },
@@ -54,7 +54,7 @@
         "description": "DARK SOULS™ II: Scholar of the First Sin es una versión extendida del clásico juego de FromSoftware, manteniendo la clásica característica oscura de los juegos de la serie mientras que añade nuevos desafíos y dificultades a la jugabilidad.",
         "year": 2015,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/scholar-of-the-first-sin-portada.jpg"
     },
@@ -66,7 +66,7 @@
         "description": "DARK SOULS™ III es la tercer y última entrega del juego de acción oscura que atrapó a generaciones. Adéntrate en el devastado reino de Lothric en la forma del Latente Elegido para perpetuar o dar fin a la Era del Fuego. La elección final es tuya.",
         "year": 2016,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/Dark-souls-III-portada.webp"
     },
@@ -78,7 +78,7 @@
         "description": "Ashes of Ariandel es el primer DLC de DARK SOULS™ III. Viaja al mundo nevado de Ariandel para descubrir nuevos escenarios, armas, armaduras, hechizos y mucho más. ¿Aceptarás el desafío y te sumergirás en la oscuridad de nuevo?.",
         "year": 2016,
         "developer": "FromSoftware",
-        "genre": ["DLC"],
+        "genre": ["DLC", "Soulslike", "Dark Fantasy"],
         "inCart": false,
         "image": "./img/Ashes-of-ariandel.jpg"
     },
@@ -90,7 +90,7 @@
         "description": "The Ringed City es el DLC final de DARK SOULS™ III. Viaja al fin del mundo en busca de la Ciudad Anillada y encuentra nuevos jefes, tierras y enemigos con nuevas armaduras, magia y objetos. Experimenta el épico capítulo final de un oscuro mundo que solo podía haber sido creado por Hidetaka Miyazaki. Un nuevo mundo, un último viaje.",
         "year": 2016,
         "developer": "FromSoftware",
-        "genre": ["DLC"],
+        "genre": ["DLC", "Soulslike", "Dark Fantasy"],
         "inCart": false,
         "image": "./img/the-ringed-city-portada.jpg"
     },
@@ -126,7 +126,7 @@
         "description": "Enfrente tus pesadillas mientras buscas respuestas en la antigua ciudad de Yharnam, ahora maldecida por una enfermedad endémica que se propaga por las calles como un fuego abrasador. El peligro, la muerte y la locura merodean en cada esquina de este mundo oscuro y espantoso, y debes descubrir sus secretos más oscuros para poder sobrevivir.",
         "year": 2015,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/bloodborne-portada.webp"
     },
@@ -150,7 +150,7 @@
         "description": "Experimenta la Pesadilla de los cazadores que una vez protegieron los secretos más oscuros y profundos de Byrgenswerth y descrube el misterio del sinistreo pasado de Yharnam con el contenido descargable del DLC para Bloodborne™. Viaja a un mundo en el que antiguos cazadores están atrapados por siempre, encuentra múltiples armas y atuendos nuevos para sumar a tu arsenal de cazador y explora nuevos niveles repletos de peligros, reocmpensas y temibles bestias por cazar.",
         "year": 2015,
         "developer": "FromSoftware",
-        "genre": ["DLC"],
+        "genre": ["DLC", "Dark Fantasy", "Soulslike", "Action"],
         "inCart": false,
         "image": "./img/BB-the-old-hunters.avif"
     },
@@ -162,7 +162,7 @@
         "description": "Traza tu propio camino hacia la venganza, restituye tu honor, mata con ingenio. Explora el Japón de la era Sengoku de finales del siglo XVI, un brutal periodo de constante conflicto, mientras te enfrentas a inconmensurables enemigos en un mundo oscuro y tortuoso. Despliega un arsenal de instrumentos protésicos letales y poderosas habilidades samurai, al mismo tiempo que combinas el sigilo, la verticalidad y la transversalidad a los viscerales combates cara a cara en una sangrienta confrontación.",
         "year": 2019,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/sekiro-shadows-die-twice-portada.jfif"
     },
@@ -174,7 +174,7 @@
         "description": "Álzate, Sinluz y que la gracia te guíe para abrazar el poder del Círculo de Elden y encumbrarte como Señor del Círculo en las Tierras Intermedias.",
         "year": 2022,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role", "Open World"],
         "inCart": false,
         "image": "./img/elden-ring-portada.jpg"
     },
@@ -186,7 +186,7 @@
         "description": "Shadow of the Erdtree es un DLC de ELDEN RING™. En un entorno oscuro e intenso, Shadow of the Erdtree invita a los jugadores a seguir su viaje con la libertad de explorar y disfrutar de una aventura a su propio ritmo. El reino de las sombras ha estado aislado de las Tierras Intermedias desde su creación. Ahora, en busca de Miquella, los Sinluz son algunas de las primeras almas que se aventuran aquí desde tiempos inmemoriales. Atraviesa zonas de terreno abierto y descubre nuevas mazmorras llenas de peligros y misterios ocultos.",
         "year": 2024,
         "developer": "FromSoftware",
-        "genre": ["DLC"],
+        "genre": ["DLC", "Soulslike", "Dark Fantasy"],
         "inCart": false,
         "image": "./img/elden_ring_shadow_of_the_erdtree-5873293.jpg"
     },
@@ -210,7 +210,7 @@
         "description": "Un nuevo juego de acción inspirado en el concepto de la serie ARMORED CORE que aprovecha el conocimiento adquirido durante el desarrollo de los últimos juegos de acción de FromSoftware.",
         "year": 2023,
         "developer": "FromSoftware",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Shooter", "Mechas", "Action", "Hard"],
         "inCart": false,
         "image": "./img/armored-core.avif"
     },
@@ -222,7 +222,7 @@
         "description": "ELDEN RING™ NIGHTREIGN es una aventura independiente dentro del universo de ELDEN RING creada para ofrecer a los jugadores una nueva experiencia al reinventar el diseño central del juego. Une fuerzas con otros jugadores para enfrentarte a la amenaza de la noche y los peligros que trae consigo en un cooperativo para 3 jugadores. Tres Azotes de la Noche tendrán dos días completas para explorar las tierras de Altolimbo y dar caza a uno de los terroríficos Señores de la Noche. Encuentra nuevos compañeros o invita a tus amigos a unirse a una experiencia cooperativa para 3 jugadores que siempre será distinta.",
         "year": 2025,
         "developer": "FromSoftware",
-        "genre": ["Soulslike", "Roguelike"],
+        "genre": ["Soulslike", "Roguelike", "Dark Fantasy", "Action", "Role", "Coop"],
         "inCart": false,
         "image": "./img/elden-ring-nightreign.webp"
     },
@@ -234,7 +234,7 @@
         "description": "ELDEN RING™ NIGHTREIGN - Deluxe Edition incluye: ELDEN RING™: Nightreign, ELDEN RING NIGHTREIGN The Forsaken Hollows, 2 Azotes de la Noche adicionales, 2 jefes de tercer día, entorno cambiante adicional, ¡y mucho más!, libro de arte digital y banda sonora reducida.",
         "year": 2025,
         "developer": "FromSoftware",
-        "genre": ["Bundle"],
+        "genre": ["Bundle", "Coop"],
         "inCart": false,
         "image": "./img/nightreign-deluxe-portada.avif"
     },
@@ -246,7 +246,7 @@
         "description": "En la tercera entrega de la serie de RPG de acción oscura de samuráis, tendrás que combinar estilos de combate samurái y ninja para enfrentarte a temibles yokai en un emocionante campo abierto.",
         "year": 2026,
         "developer": "KOEI TECMO GAMES CO., LTD.",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role", "Coop"],
         "inCart": false,
         "image": "./img/nioh-3-portada.jpg"
     },
@@ -258,7 +258,7 @@
         "description": "De Moon Studios, los creadores galardonados de Ori and the Blind Forest y Ori and the Will of the Wisps, llega No Rest for the Wicked: un RPG de acción único y visceral, ambientado en un mundo creado a mano con combates de estilo Souls. Con modo cooperativo para hasta cuatro jugadores.",
         "year": 2024,
         "developer": "Moon Studios GmbH",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "RPG", "Action", "Dark Fantasy", "Coop"],
         "inCart": false,
         "image": "./img/no_rest_for_the_wicked-5856415.jpg"
     },
@@ -270,7 +270,7 @@
         "description": "Black Myth: Wukong es un RPG de acción inspirado en la mitología china. Encarnarás al Predestinado, que ha de embarcarse en un viaje repleto de peligros y maravillas para descubrir la verdad oculta acerca de una gloriosa leyenda del pasado.",
         "year": 2024,
         "developer": "Game Science",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role"],
         "inCart": false,
         "image": "./img/black-myth-wukong-portada.webp"
     },
@@ -282,7 +282,7 @@
         "description": "WUCHANG: Fallen Feathers es un RPG de acción estilo Souls ambientado en la tierra de Shu durante la oscura y tumultuosa dinastía Ming, repleta de facciones en guerra y asolada por una misteriosa enfermedad que engendra monstruos.",
         "year": 2025,
         "developer": "Leenzee",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role", "Girl Protagonist"],
         "inCart": false,
         "image": "./img/wuchang-fallen-feathers-462u7.jpg"
     },
@@ -294,7 +294,7 @@
         "description": "Lies of P es un soulslike trepidante que toma la conocida historia de Pinocho, le da la vuelta y la ubica en una belle époque elegante y oscura.",
         "year": 2023,
         "developer": "NEOWIZ",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Action"],
         "inCart": false,
         "image": "./img/lies-of-p-portada.avif"
     },
@@ -306,7 +306,7 @@
         "description": "Evita la extinción de la raza humana en este juego de acción-aventura postapocalíptico: Stellar Blade™. Disfruta de combates feroces y una historia intrigante mientras resuelves los misterios que llevaron a la caída de la Tierra.",
         "year": 2025,
         "developer": "SHIFT UP Corporation",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Action", "Adventure", "Girl Protagonist"],
         "inCart": false,
         "image": "./img/stellar-blade-portada.avif"
     },
@@ -318,7 +318,7 @@
         "description": "Un mundo inmenso te aguarda en Lords of the Fallen, un RPG medieval de acción y fantasía con tintes oscuros. Como cruzado de la oscuridad, emprende una gesta para derrocar a Adyr, el Dios Demonio. La versión 2.5 ya está disponible, con progreso compartido en cooperativo y pase de amigo gratuito.",
         "year": 2023,
         "developer": "CI Games",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Dark Fantasy", "Hard", "Action", "Role", "RPG"],
         "inCart": false,
         "image": "./img/lords-of-the-fallen-61xo5.jpg"
     },
@@ -330,7 +330,7 @@
         "description": "Siente la fuerza desbocada, salvaje e imparable de la naturaleza en entornos que se transforman drásticamente de un momento a otro. Esta es una historia de monstruos y humanos, y sus dificultades para coexistir en armonía en un mundo de dualidades.",
         "year": 2025,
         "developer": "CAPCOM Co., Ltd.",
-        "genre": ["Hunting"],
+        "genre": ["Hunting", "Action", "Role", "Exploration", "Coop"],
         "inCart": false,
         "image": "./img/monster-hunter-wilds-portada.webp"
     },
@@ -342,7 +342,7 @@
         "description": "Como superviviente de la humanidad, te embarcarás en una aventura a solas o en compañía de grupos de hasta tres jugadores para enfrentarte a hordas de enemigos mortales y aterradores jefes finales, con el fin de reconquistar y reconstruir aquello que la humanidad ya daba por perdido.",
         "year": 2019,
         "developer": "Gunfire Games",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Shooter", "Dark Fantasy", "Role", "Hard", "Coop"],
         "inCart": false,
         "image": "./img/remnant-from-the-ashes-portada.webp"
     },
@@ -354,7 +354,7 @@
         "description": "Remnant II® es la secuela del juego superventas Remnant: From the Ashes que enfrenta a los supervivientes de la humanidad contra nuevas criaturas mortíferas y jefes divinos en mundos aterradores.",
         "year": 2023,
         "developer": "Gunfire Games",
-        "genre": ["Soulslike"],
+        "genre": ["Soulslike", "Shooter", "Dark Fantasy", "Role", "Hard", "Coop"],
         "inCart": false,
         "image": "./img/remnant-ii-portada.avif"
     }

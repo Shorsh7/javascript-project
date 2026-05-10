@@ -34,7 +34,11 @@ export const renderGames = (games) => {
             
             <div class="game-content">
                 <h3>${game.name}</h3>
-                <p>${game.genre.join(", ")}</p>
+                <p>${
+                Array.isArray(game.genre)
+                    ? game.genre.join(", ")
+                    : game.genre
+                }</p>
                 <p class="description">${game.description}</p>
                 <p class="price">USD ${game.price}</p>
             </div>

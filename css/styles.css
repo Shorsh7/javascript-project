@@ -184,6 +184,8 @@ nav {
 }
 
 #searchInput {
+    font-family: "Press Start 2P", monospace;
+
     width: 280px;
     padding: 12px 16px;
 
@@ -204,6 +206,8 @@ nav {
 }
 
 #categoryFilter {
+    font-family: "Press Start 2P", monospace;
+
     padding: 12px;
     border-radius: 10px;
 
