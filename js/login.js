@@ -17,10 +17,14 @@ const loginButton =
         "loginButton"
     )
 
+const loaderScreen =
+    document.getElementById(
+        "loaderScreen"
+    )
+
 const handleLogin = () => {
     const identifier =
         loginEmail.value.trim()
-
     const password =
         loginPassword.value.trim()
 
@@ -53,11 +57,25 @@ const handleLogin = () => {
         result.message
     )
 
+    loaderScreen.classList.add(
+        "active"
+    )
+
     setTimeout(() => {
-        window.location.href =
-            "./index.html"
-    }, 1500)
+        loaderScreen.classList.add(
+            "fade-out"
+        )
+        setTimeout(() => {
+            window.location.href =
+                "./index.html"
+        }, 800)
+    }, 2500)
 }
+
+loaderScreen.setAttribute(
+    "aria-hidden",
+    "false"
+)
 
 loginButton.addEventListener(
     "click",
@@ -79,3 +97,31 @@ loginPassword.addEventListener(
     "keydown",
     handleEnter
 )
+
+const loaderText =
+    document.getElementById(
+        "loaderText"
+    )
+
+const loadingMessages = [
+    "Conectando con S-Team...",
+    "Cargando catálogo...",
+    "Preparando marketplace...",
+    "Inicializando sistema...",
+    "Sincronizando inventario..."
+]
+
+let index = 0
+
+const textInterval =
+    setInterval(() => {
+        loaderText.textContent =
+            loadingMessages[index]
+        index++
+        if (
+            index >=
+            loadingMessages.length
+        ) {
+            index = 0
+        }
+    }, 700)

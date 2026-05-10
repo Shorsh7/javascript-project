@@ -17,18 +17,20 @@
             <h2>INICIAR SESIÓN</h2>
 
             <input
-                type="email"
+                type="text"
                 id="loginEmail"
+                autocomplete="off"
                 placeholder="Usuario o Correo electrónico"
             >
 
             <input
                 type="password"
                 id="loginPassword"
+                autocomplete="off"
                 placeholder="Contraseña"
             >
 
-            <button id="loginButton">
+            <button id="loginButton" type="button">
                 Iniciar sesión
             </button>
 
@@ -41,6 +43,22 @@
         </section>
     </main>
 
+    <div id="loaderScreen" aria-hidden="true">
+        <div class="scanlines"></div>
+        <div class="loader-content">
+            <img height="" width=""
+                src="./img/s-team-logo.png"
+                alt="S-Team Loader"
+                id="loaderLogo"
+            >
+            <h2 class="loader-title" id="loaderText">
+                LOADING
+            </h2>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script type="module" src="./js/login.js"></script>
 
